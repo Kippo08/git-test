@@ -1,0 +1,591 @@
+@font-face {
+    font-family: 'Normal omori';
+    src: url(fonts/OMORI_GAME2.ttf);
+}
+
+@font-face {
+    font-family: 'Spooke omori';
+    src: url(fonts/OMORI_GAME.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Normal omori', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* navbar */
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: center;
+  }
+
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  .navbar__links {
+    font-family: 'Spooke omori';
+    color: #fff;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    text-decoration: none;
+    height: 100%;
+
+    background: linear-gradient(to right, transparent, transparent),
+                linear-gradient(to right,#f7aef8,
+                                         #f7aef8 20%,
+                                         #b388eb 20%,
+                                         #b388eb 40%,
+                                         #8093f1 40%,
+                                         #8093f1 60%,
+                                         #72ddf7 60%,
+                                         #72ddf7 80%,
+                                         #f4f4ed 80%,
+                                         #f4f4ed);
+    background-size: 100% 3px, 0  3px;
+    background-position: 100% 100%, 0 100% ;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+
+  .navbar__links:hover {
+    background-size: 0 3px, 100% 3px;
+  }
+
+  /* about section */
+  .main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0 ;
+  }
+
+  .main h1{
+    color: #000000;
+    background-color: #fff;
+    font-family: 'Spooke omori';
+    justify-content: center;
+    font-size: 3rem;
+  }
+  
+  .main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    background-color: #fff;
+  }
+  
+  .main__content {
+    background-color: #fff;
+    color: #000000;
+    width: 100%;
+  }
+
+  .main__content h1{
+    color: #000000;
+    background-color: #fff;
+    font-size: 4rem;
+    font-family: 'Normal omori';
+  }
+
+  .main__content p{
+    color: #000000;
+    background-color: #fff;
+    font-size: 2.5rem;
+  }
+
+  .main__img--card{
+    margin: 10px;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #000000;
+    background-image: url(pics/photo_2023-05-11_16-40-15.jpg);
+    border: #000000;
+    border: 2px solid black;
+  }
+
+  .main__img--container{
+    background-color: #fff;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .main__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      height: 90%;
+    }
+  
+    .main__img--container {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .main__img--card {
+      background-image: url(pics/400.jpg);
+      height: 400px;
+      width: 400px;
+    }
+  
+    .main__content {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+  
+    .main__content h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
+  
+    .main__content h2 {
+      font-size: 3rem;
+    }
+    }
+
+    @media screen and (max-width: 480px) {
+        .main__img--card {
+          width: 360px;
+          height: 360px;
+          background-image: url(pics/360.jpg);
+        }
+      
+        .main__content h1 {
+          font-size: 2rem;
+          margin-top: 3rem;
+        }
+        .main__content h2 {
+          font-size: 2rem;
+        }
+      
+        .main__content p {
+          margin-top: 2rem;
+        }
+      }
+ .main__btn{
+    height: 2.5rem;
+    width: 5rem;  
+    text-align: center;  
+ }
+
+ .main__btn a{
+    font-size: 2rem;
+    font-family: 'Spooke omori';
+    text-decoration: none;
+ }  
+ 
+ /* intersts section */
+ .intrests {
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+  }
+
+  .intrests h1{
+    margin-bottom: 5rem;
+    font-size: 3rem;
+    font-family: 'Spooke omori';
+  }
+
+  .intrests__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .intrests__card__program {
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-image: url(pics/photo_3_2023-05-10_18-02-23.jpg) ;
+    border: 2px solid white;
+  }
+
+  .intrests__card__sport {
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-image: url(pics/photo_2_2023-05-10_18-02-23.jpg);
+    border: 2px solid white;
+  }
+
+  .intrests__card__cello {
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-image: url(pics/photo_5_2023-05-10_18-02-23.jpg);
+    border: 2px solid white;
+  }
+
+  .intrests__card__singing {
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-image: url(pics/photo_1_2023-05-10_18-02-23.jpg);
+    border: 2px solid white;
+  }
+
+  .intrests__card__games {
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-image: url(pics/photo_2023-05-11_18-13-33.jpg);
+    border: 2px solid white;
+  }
+
+  .intrests__card__music {
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-image: url(pics/photo_4_2023-05-10_18-02-23.jpg);
+    border: 2px solid white;
+  }
+
+  .intrests__card__btn {
+    border: 2px solid black;
+    background-color: #fff;
+    color: #000000;
+    margin: 1rem;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 999;
+  }
+  
+  @media screen and (max-width: 1300px) {
+    .intrests__wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .intrests__wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 2px solid white;
+    z-index: 10;
+    background-color: #f4f4ed;
+    width: 800px;
+    max-width: 80%;
+    
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+  }
+
+  .modal-header .title {
+    font-size: 3rem;
+  }
+
+  .modal-header .close-button {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.75rem;
+    font-family: 'Spooke omori';
+  }
+  
+  .modal-body {
+    padding: 10px 15px;
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: grid;
+    max-height: 519px;
+    overflow: auto;
+  }
+  
+  .intrests__img--card_program {
+    border: 1px solid white;
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: url(pics/photo_5_2023-05-09_18-08-34.jpg);
+  }
+
+  .intrests__img--card_sport {
+    border: 1px solid white;
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: url(pics/photo_4_2023-05-09_18-08-34.jpg);
+  }
+
+  .intrests__img--card_cello {
+    border: 1px solid white;
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: url(pics/photo_2_2023-05-09_18-08-34.jpg);
+  }
+
+  .intrests__img--card_singing {
+    border: 1px solid white;
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: url(pics/photo_7_2023-05-09_18-08-34.jpg);
+  }
+
+  .intrests__img--card_games {
+    border: 1px solid white;
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: url(pics/photo_1_2023-05-09_18-08-34.jpg);
+  }
+
+  .intrests__img--card_music {
+    border: 1px solid white;
+    margin: 10px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: url(pics/Snag_3a1f26.jpg.png);
+  }
+
+  .modal-body p {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 870px) {
+    .modal-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .intrests__img--card {
+      height: 400px;
+      width: 300px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  #overlay {
+    pointer-events: none;
+  }
+
+  #overlay.active {
+    opacity: 0;
+    pointer-events: all;
+  }
+
+  .footer__container {
+    background-color: #fff;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer__link--items {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+  }
+  
+  .social__icon--link {
+    color: #fff;
+    font-size: 24px;
+  }
+  
+  .social__media {
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .social__media--wrap {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+  }
+  
+  .social__icons {
+    padding-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    background-color: #fff;
+  }
+
+  .social__icon--link {
+    background-color: #fff;
+    color: #fff;
+  }
+  
+  .website__links {
+    background-color: #fff;
+    color: #000;
+    font-size: 5rem;
+  }
+  
+  @media screen and (max-width: 820px) {
+    .footer__links {
+      padding-top: 2rem;
+    }
+  
+    #footer__logo {
+      margin-bottom: 2rem;
+    }
+  
+    .website__rights {
+      margin-bottom: 2rem;
+    }
+  
+    .footer__link--wrapper {
+      flex-direction: column;
+    }
+  
+    .social__media--wrap {
+      flex-direction: column;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .footer__link--items {
+      margin: 0;
+      padding: 10px;
+      width: 100%;
+    }
+  }
